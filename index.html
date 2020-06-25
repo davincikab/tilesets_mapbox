@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapbox GL JS debug page</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; }
+        html, body, #map { height: 100%; }
+        #time { position: absolute; width: 90%; top: 10px; left: 10px; }
+    </style>
+</head>
+
+<body>
+<div id='map'></div>
+<input id='time' type='range' min="0" max="86400" />
+
+<script src="https://unpkg.com/three@0.106.2/build/three.min.js"></script>
+<script src="https://unpkg.com/three@0.106.2/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://unpkg.com/suncalc@1.8.0"></script>
+<script src="https://unpkg.com/gl-matrix@2.3.2/dist/gl-matrix-min.js"></script>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+<script src='https://unpkg.com/suncalc@1.8.0/suncalc.js'></script>
+<script src="index.js"></script>
+</body>
+</html>
