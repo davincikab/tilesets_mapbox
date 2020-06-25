@@ -33,7 +33,7 @@ map.on('click', function(e){
 // Custom Layer
  // parameters to ensure the model is georeferenced correctly on the map
  var modelOrigin = [-7.6487996503384466, 33.600481117384945];
- var modelAltitude = 8;
+ var modelAltitude = 0;
  var modelRotate = [Math.PI / 2, 0, 0];
 
  var modelAsMercatorCoordinate = mapboxgl.MercatorCoordinate.fromLngLat(
@@ -65,7 +65,7 @@ map.on('click', function(e){
    onAdd: function(map, gl) {
      this.camera = new THREE.Camera();
      this.scene = new THREE.Scene();
-     const color = 0xc51dd1;
+     const color = 0xFCF5E8;
 
      // create two three.js lights to illuminate the model
      this.directionalLight = new THREE.DirectionalLight(color,0.8);
@@ -176,7 +176,7 @@ map.on('load', () => {
         'type': 'fill-extrusion',
         'minzoom': 14,
         'paint': {
-            'fill-extrusion-color': '#c51dd1',
+            'fill-extrusion-color': '#FCF5E8',
             'fill-extrusion-height': ["number", ["get", "height"], 5],
             'fill-extrusion-base': ["number", ["get", "min_height"], 0],
             'fill-extrusion-opacity': 1
