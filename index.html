@@ -8,13 +8,22 @@
     <style>
         body { margin: 0; padding: 0; }
         html, body, #map { height: 100%; }
-        #time { position: absolute; width: 90%; top: 10px; left: 10px; }
+
+        #time-text{ position: absolute; width: 30%; top: 10px; left: 10px; }
+        #time { position: absolute; width: 30%; top: 25px; left: 10px; }
+
+        #day-text { position: absolute; width: 30%; top: 10px; right: 10px; }
+        #day { position: absolute; width: 30%; top: 25px; right: 10px; }
     </style>
 </head>
 
 <body>
 <div id='map'></div>
-<input id='time' type='range' min="0" max="86400" />
+
+<div class="warpp range-slider">
+    <input id="day" type="range" class="range-slider__range" min="1" max="365" /> <span id="day-text">Day</span>
+    <input id="time" class="range-slider__range" type="range" min="0" max="86400" value="0" /> <span id="time-text">Time</span>
+</div>
 
 <script src="https://unpkg.com/three@0.106.2/build/three.min.js"></script>
 <script src="https://unpkg.com/three@0.106.2/examples/js/loaders/GLTFLoader.js"></script>
@@ -23,6 +32,7 @@
 
 <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
 <script src='https://unpkg.com/suncalc@1.8.0/suncalc.js'></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="index.js"></script>
 </body>
 </html>
